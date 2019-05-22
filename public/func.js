@@ -11,4 +11,16 @@ $(document).ready(function () {
       $("#header-cart-btn").removeClass("hover-effect");
     }
   });
+
+  // uncheck all radio buttons - at first
+  $('input[type=radio]:checked').prop('checked', false);
+
+  //insert value in html according to what user select
+  $(".radio-group").on("click", "label", function()
+  {
+      radio_value = $(this).prev(":radio").val();
+      $("#show").html(radio_value);
+  });
+
+
 });
