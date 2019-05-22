@@ -1,0 +1,85 @@
+
+$l-grey: #888;
+$d-grey: #222;
+
+@mixin font-l () {
+  font-size: 13px;
+  font-weight: 300;
+  color: $d-grey;
+  @content;
+}
+
+@mixin border-l () {
+  border: 1px solid #ccc;
+  background: white;
+  @content;
+}
+
+
+body {
+  font-size: 12px;
+  line-height: 1.4rem;
+}
+
+
+.header {
+  background-color: #F6F6F7;
+  margin: 1em 0;
+
+  .my-cart {
+    width: 100%;
+    height: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    position: relative;
+    z-index: 200;
+  }
+}
+
+
+.cart-list {
+  background-color: white;
+  display: none;
+  position: absolute;
+  top: 30px;
+  width: 25%;
+  z-index: 120;
+}
+
+
+.wrapper {
+  padding: 1.5rem 3rem;
+}
+
+.select-wrap {
+  p {
+    span {
+      color: #c90000;
+    }
+  }
+
+  .select-title {
+    color: $l-grey;
+  }
+
+
+
+  .btn-cart {
+    margin: 30px 0;
+
+    >a {
+      border: 2px solid black;
+      text-transform: uppercase;
+      color: black;
+      transition: all 0.2s ease;
+
+      &:hover,
+      &:focus {
+        background: black;
+        color: white;
+      }
+    }
+  }
+}
+
