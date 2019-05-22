@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
     integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <title>Document</title>
 </head>
 
@@ -26,12 +25,22 @@
       <ul class="cart-list">
         <li class="row">
           <div class="col-4">
-            <a href="#" class="col-6"><img src="/classic-tee.jpg" class="cart-thumb" alt=""></a>
+            <a href="#" class="cart-thumb col-6"><img src="/classic-tee.jpg" class="cart-thumb" alt=""></a>
           </div>
           <div class="col-8">
             <h6><a href="#">Classic Tee</a></h6>
-            <p>1x $75.00</p>
-            <p>Size: S</p>
+            <p>1x<span class="price">$75.00</span></p>
+            <p>Size: <span class="size">S</span></p>
+          </div>
+        </li>
+        <li class="row">
+          <div class="col-4">
+            <a href="#" class="cart-thumb col-6"><img src="/classic-tee.jpg" class="cart-thumb" alt=""></a>
+          </div>
+          <div class="col-8">
+            <h6><a href="#">Classic Tee</a></h6>
+            <p>3x<span class="price">$75.00</span></p>
+            <p>Size: <span class="size">L</span></p>
           </div>
         </li>
       </ul>
@@ -42,12 +51,12 @@
 
   <div class="container wrapper">
     <div class="row">
-      <div class="col-lg-6 col-sm-12">
+      <div class="col-lg-6 col-sm-12 prd-img">
         <img src="/classic-tee.jpg">
       </div>
-      <div class="col-lg-6 col-sm-12">
-        <h2>Classic Tee</h2>
-        <h3>$75.00</h3>
+      <div class="col-lg-6 col-sm-12 prd-detail">
+        <h2 class="title">Classic Tee</h2>
+        <h3 class="price">$75.00</h3>
         <p class="desc">
           DLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Sit amet cursus sit amet dictum sit amet justo. Aenean sed adipiscing diam donec adipiscing
@@ -59,18 +68,22 @@
 
           <form class="select-size">
             <div class="radio-group">
-              S M L
+              <input type="radio" id="option-s" name="selector" value="S" checked="">
+              <label for="option-s">S</label>
+              <input type="radio" id="option-m" name="selector" value="M" checked="">
+              <label for="option-m">M</label>
+              <input type="radio" id="option-l" name="selector" value="L" checked="">
+              <label for="option-l">L</label>
             </div>
           </form>
 
           <p class="btn-cart">
             <a href="/">Add to Cart</a>
           </p>
-        </div>
-      </div>
+        </div> <!-- //select-wrap-->
+      </div><!-- //prd-detail-->
     </div>
-
   </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </body>
-
 </html>
